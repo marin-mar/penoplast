@@ -9,11 +9,17 @@ function App() {
     <div className="app">
       <Header />
       <main className="content">
-        <TitleElement titleElement="main-title" text="Пенопласт от производителя" />
-        <TitleElement titleElement="main-subtitle" text="и изделия из пенопласта" />
-        <TitleElement titleElement="section-title" text="Работаем официально. Имеем допуск." />
-        <TitleElement titleElement="catalog-title" text="Каталог товаров" style={{backgroundColor: 'black'}}/>
+        <TitleElement classes="content__title" titleElement="main-title" text="Пенопласт от производителя" />
+        <TitleElement classes="content__title" titleElement="main-subtitle" text="и изделия из пенопласта" />
+        <TitleElement classes="content__title" titleElement="section-title" text="Работаем официально. Имеем допуск." />
         <TitleElement
+          classes="content__title"
+          titleElement="catalog-title"
+          text="Каталог товаров"
+          style={{ backgroundColor: 'black' }}
+        />
+        <TitleElement
+          classes="content__title"
           titleElement="section-subtitle"
           text="Получите расчет стоимости  пенопласта для вас в течении 20 минут"
         />

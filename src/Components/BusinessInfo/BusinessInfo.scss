@@ -1,0 +1,84 @@
+@import '../../assets/variables.scss';
+
+.business-info {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 100px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    @media screen and (min-width: 480px) {
+      padding-right: 25px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+      order: 1;
+      padding-right: 0;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-decoration: none;
+    color: inherit;
+
+    @media screen and (min-width: 480px) {
+      font-size: 23px;
+    }
+  }
+
+  &__hours {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 89px;
+    height: 47px;
+    background-color: $light;
+    box-shadow: $box-shadow;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__icon {
+    display: block;
+    object-fit: none;
+  }
+}

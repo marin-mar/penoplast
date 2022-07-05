@@ -1,7 +1,7 @@
 @import '../../assets/variables.scss';
 
 .title {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-style: normal;
   text-align: center;
   display: inline-block;
@@ -14,7 +14,7 @@
       font-weight: 900;
       font-size: 29px;
       line-height: 35px;
-      color: $text-dark;
+      color: $dark;
 
       @media screen and (min-width: 1920px) {
         max-width: 1182px;
@@ -58,7 +58,7 @@
       font-size: 39px;
       line-height: 47px;
       text-transform: uppercase;
-      color: $text-light;
+      color: $light;
 
       @media screen and (min-width: 1920px) {
         max-width: 866px;

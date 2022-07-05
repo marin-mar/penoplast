@@ -1,13 +1,14 @@
 import React from 'react';
 import Logo from '../Logo/Logo.js';
+import BusinessInfo from '../BusinessInfo/BusinessInfo.js';
 
 import './Header.scss';
 
 const Header = () => {
-	return (
+  return (
     <header className="header">
-      <Logo />
-      <h2>header</h2>
+      <Logo classes="header__logo" />
+      <BusinessInfo classes="header__business-info" />
     </header>
   );
 };

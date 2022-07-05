@@ -1,12 +1,75 @@
+@import '../../assets/variables.scss';
+
 .logo {
-	display: block;
-  width: 184px;
-  height: 193px;
-	margin-top: -60px;
-	
-  @media screen and (min-width: 1920px) {
-		width: 235px;
-    height: 247px;
-		margin-top: -30px;
+  width: 100%;
+  color: $dark;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 184px;
+    height: 193px;
+    background-color: $light;
+    box-shadow: $box-shadow;
+    border-radius: 62px;
+
+    @media screen and (min-width: 1920px) {
+      width: 235px;
+      height: 247px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 130px;
+    height: 130px;
+  }
+
+  &__text {
+    display: none;
+
+    @media screen and (min-width: 720px) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: 1920px) {
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__slogan {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: 1200px) {
+      margin: 30px auto 0 45px;
+    }
   }
 }
