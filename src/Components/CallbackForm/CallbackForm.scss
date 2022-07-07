@@ -1,0 +1,81 @@
+@import '../../assets/variables.scss';
+
+.callback-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+
+  &__title {
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 1920px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (min-width: 1920px) {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+  }
+
+  &__input {
+    flex: 0 0 auto;
+    width: 100%;
+
+    @media screen and (min-width: 1920px) {
+      width: 48%;
+    }
+  }
+
+  &__submit-button {
+    flex: 1 0 auto;
+  }
+
+  &__check-button {
+    flex: 1 0 auto;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    min-height: max-content;
+    padding-left: 20%;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: $light;
+      position: absolute;
+      top: 10%;
+      left: 5%;
+    }
+
+    & .text-element {
+        text-align: start;
+      }
+
+    &_active {
+      & .text-element {
+        opacity: 0.6;
+      }
+
+      &::before {
+        background: $gradient-accent;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../assets/variables.scss';
+
+.button-element {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $light;
+  background: $gradient-accent;
+  box-shadow: $box-shadow-btn;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 582px;
+  min-height: 96px;
+	box-sizing: border-box;
+	cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.8;
+  }
+}
