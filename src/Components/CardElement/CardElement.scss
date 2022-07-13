@@ -1,0 +1,72 @@
+@import '../../assets/variables.scss';
+
+.card {
+  width: 100%;
+  max-width: 518px;
+  min-height: 153px;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: $light;
+  background: $gradient-dark;
+  box-shadow: $box-shadow-btn;
+  border-radius: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 15px 10px;
+  grid-template-areas:
+    'icon'
+    'title'
+    'text';
+  justify-content: center;
+  align-content: center;
+  justify-items: stretch;
+  align-items: center;
+
+  @media screen and (min-width: 480px) {
+    grid-template-columns: 112px 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas:
+      'icon title'
+      'icon text';
+  }
+
+	@media screen and (min-width: 940px) {
+		min-height: 185px;
+	}
+
+  &__icon {
+    display: inline-block;
+    grid-area: icon;
+    justify-self: center;
+    align-self: stretch;
+    width: 112px;
+    height: 112px;
+    object-fit: contain;
+    object-position: left center;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    grid-area: title;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    grid-area: text;
+    justify-self: stretch;
+    align-self: stretch;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

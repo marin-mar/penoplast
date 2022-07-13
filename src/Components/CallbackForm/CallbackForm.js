@@ -63,12 +63,6 @@ const CallbackForm = ({ classes }) => {
           onInputChange={onInputChange}
         />
         <ButtonElement
-          classes="callback-form__submit-button"
-          text="Заказать прайс на товар"
-          type="submit"
-          onClickHandler={(evt) => onSubmitForm(evt)}
-        />
-        <ButtonElement
           classes="callback-form__check-button"
           text=""
           type="button"
@@ -79,6 +73,12 @@ const CallbackForm = ({ classes }) => {
             text="Я принимаю условия передачи информации"
           />
         </ButtonElement>
+        <ButtonElement
+          classes="callback-form__submit-button"
+          text="Заказать прайс на товар"
+          type="submit"
+          onClickHandler={(evt) => onSubmitForm(evt)}
+        />
       </form>
     </div>
   );
