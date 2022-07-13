@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import TextElement from '../TextElement/TextElement';
 import InputElement from '../InputElement/InputElement';
@@ -7,31 +7,29 @@ import ButtonElement from '../ButtonElement/ButtonElement';
 import './CallbackForm.scss';
 
 const CallbackForm = ({ classes }) => {
-  const formData = {};
+  const [formData, setFormData] = useState({ 'accept-conditions': false, 'client-name': '', 'client-phone': '' });
+
+  const onInputChange = (target) => {
+    setFormData({ ...formData, [target.name]: target.value });
+  };
 
   const onClickHandler = (evt) => {
+    const activeBtnClass = 'callback-form__check-button_active';
+    const target = evt.target;
+
     evt.preventDefault();
-    formData['accept-conditions'] = !formData['accept-conditions'];
-    evt.target.parentNode.classList.toggle('callback-form__check-button_active');
+
+    target.type === 'button'
+      ? target.classList.toggle(activeBtnClass)
+      : target.parentNode.classList.toggle(activeBtnClass);
+
+    setFormData({ ...formData, 'accept-conditions': !formData['accept-conditions'] });
   };
 
   const onSubmitForm = (evt) => {
     evt.preventDefault();
     const form = evt.target.parentNode;
-    const formInputs = Array.from(form.elements);
 
-    formInputs.forEach((formInput) => {
-      if (formInput.classList.contains('callback-form__input')) {
-        if (formInput.value) {
-          formData[formInput.name] = formInput.value;
-          formInput.classList.remove('input-element_invalid');
-          formInput.classList.add('input-element_valid');
-        } else {
-          formInput.classList.remove('input-element_valid');
-          formInput.classList.add('input-element_invalid');
-        }
-      }
-    });
     console.log(formData);
     form.reset();
   };
@@ -49,22 +47,24 @@ const CallbackForm = ({ classes }) => {
         text="Просто заполните форму и&nbsp;мы&nbsp;перезвоним"
       />
 
-      <form className="callback-form__form" name="callback-form">
+      <form className="callback-form__form" name="callback-form" onSubmit={onSubmitForm}>
         <InputElement
           classes="callback-form__input"
           inputType="name"
           name="client-name"
           placeholder="Введит Ваше имя"
+          onInputChange={onInputChange}
         />
         <InputElement
           classes="callback-form__input"
           inputType="tel"
           name="client-phone"
           placeholder="Введите мобильный телефон"
+          onInputChange={onInputChange}
         />
         <ButtonElement
           classes="callback-form__submit-button"
-          text="Заказать прайс на&nbsp;товар"
+          text="Заказать прайс на товар"
           type="submit"
           onClickHandler={(evt) => onSubmitForm(evt)}
         />
@@ -76,7 +76,7 @@ const CallbackForm = ({ classes }) => {
           <TextElement
             classes="callback-form__text"
             textElement="accept-text"
-            text="Я&nbsp;принимаю условия передачи информации"
+            text="Я принимаю условия передачи информации"
           />
         </ButtonElement>
       </form>

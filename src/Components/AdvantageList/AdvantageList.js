@@ -9,10 +9,10 @@ import './AdvantageList.scss';
 
 const AdvantageList = ({ classes }) => {
   const advantageList = [
-    { text: 'С&nbsp;нами выгодно сотрудничать', img: profitIcon },
-    { text: 'Доставка транспортной компанией в&nbsp;любую точку мира', img: deliveryIcon },
+    { text: 'С нами выгодно сотрудничать', img: profitIcon },
+    { text: 'Доставка транспортной компанией в любую точку мира', img: deliveryIcon },
     { text: 'Высокое качество продукции', img: qualityIcon },
-    { text: 'Работа по&nbsp;всей России', img: regionIcon },
+    { text: 'Работа по всей России', img: regionIcon },
   ];
 
   return (
