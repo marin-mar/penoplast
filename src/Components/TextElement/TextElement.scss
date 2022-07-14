@@ -44,12 +44,12 @@
 
     &_section-title {
       font-weight: 500;
-      font-size: 39px;
-      line-height: calc(47px / 39px);
+      font-size: 29px;
+      line-height: 1.5;
       text-transform: uppercase;
 
       @media screen and (min-width: 481px) and (max-width: 1919px) {
-        font-size: calc(2.4375rem + 2vw);
+        font-size: calc(1.8125rem + 2vw);
       }
 
       @media screen and (min-width: 1920px) {

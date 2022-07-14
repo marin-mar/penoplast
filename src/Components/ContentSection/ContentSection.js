@@ -1,7 +1,7 @@
 import React from 'react';
 
-// import TextElement from '../TextElement/TextElement';
 import IntroSection from '../IntroSection/IntroSection';
+import CertificateSection from '../CertificateSection/CertificateSection';
 
 import './ContentSection.scss';
 
@@ -9,14 +9,14 @@ const ContentSection = () => {
 	return (
     <main className="content">
       <IntroSection classes="content__intro-section" />
-      {/* <TextElement classes="content__title" TextElement="section-title" text="Работаем официально. Имеем допуск." /> */}
+      <CertificateSection classes="content__certificate-section" />
+      
       {/* <TextElement
         classes="content__title"
-        TextElement="catalog-title"
+        textElement="catalog-title"
         text="Каталог товаров"
         style={{ backgroundColor: 'black' }}
       /> */}
-      
     </main>
   );
 };

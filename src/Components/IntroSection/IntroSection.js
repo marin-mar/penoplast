@@ -37,7 +37,7 @@ const IntroSection = ({ classes }) => {
         />
         <AdvantageList classes="intro-section__advantage-list" />
         <CallbackForm classes="intro-section__callback-form" />
-        <CardsList classes="intro-section__cards-list" cardsList={cardsList} />
+        <CardsList classes="intro-section__cards-list cards-list_type_straight" cardsList={cardsList} />
       </div>
     </section>
   );

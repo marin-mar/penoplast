@@ -16,12 +16,28 @@
   width: 100%;
   max-width: 582px;
   min-height: 96px;
-	box-sizing: border-box;
-	cursor: pointer;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s;
 
   &:hover,
   &:focus,
   &:active {
     opacity: 0.8;
+  }
+
+  &_type {
+    &_light {
+      max-width: 235px;
+      min-height: 49px;
+      padding: 15px 10px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      text-decoration-line: underline;
+      color: $dark;
+      background: $light;
+      box-shadow: $box-shadow;
+    }
   }
 }

@@ -1,0 +1,53 @@
+@import '../../assets/variables.scss';
+
+.certificate-section {
+  max-width: 1100px;
+  margin: 90px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__title {
+    display: block;
+    max-width: 80%;
+    margin: 165px auto 65px;
+  }
+
+  &__subtitle {
+  }
+
+  &__certificate {
+		position: relative;
+  }
+
+  &__equipment {
+  }
+
+  &__img {
+    max-width: 100%;
+
+    &_opened {
+      position: absolute;
+    }
+
+    &_type {
+      &_certificate {
+				max-width: 370px;
+      }
+      &_equipment {
+				border: 1px solid black;
+      }
+    }
+  }
+
+  &__btn {
+		position: absolute;
+		top: 50%;
+		left: 15%;
+  }
+
+  &__cards-list {
+    margin: 0 auto;
+  }
+}
