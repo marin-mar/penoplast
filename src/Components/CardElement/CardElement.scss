@@ -34,9 +34,9 @@
       'icon text';
   }
 
-	@media screen and (min-width: 940px) {
-		min-height: 185px;
-	}
+  @media screen and (min-width: 940px) {
+    min-height: 185px;
+  }
 
   &__icon {
     display: inline-block;
@@ -68,5 +68,17 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  &_type {
+    &_catalog {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      border-radius: 10px;
+      width: 268px;
+      min-height: 372px;
+    }
   }
 }

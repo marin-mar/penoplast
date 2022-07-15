@@ -4,19 +4,14 @@ import IntroSection from '../IntroSection/IntroSection';
 import CertificateSection from '../CertificateSection/CertificateSection';
 
 import './ContentSection.scss';
+import CatalogSection from '../CatalogSection/CatalogSection';
 
 const ContentSection = () => {
-	return (
+  return (
     <main className="content">
       <IntroSection classes="content__intro-section" />
       <CertificateSection classes="content__certificate-section" />
-      
-      {/* <TextElement
-        classes="content__title"
-        textElement="catalog-title"
-        text="Каталог товаров"
-        style={{ backgroundColor: 'black' }}
-      /> */}
+      <CatalogSection classes="content__catalog-section" />
     </main>
   );
 };
