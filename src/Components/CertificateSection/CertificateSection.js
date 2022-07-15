@@ -35,8 +35,19 @@ const CertificateSection = ({ classes }) => {
 
   const onClickHandler = (evt) => {
     evt.preventDefault();
-    const certificateImg = document.querySelector('.certificate-section__img_type_certificate');
-    certificateImg.classList.add('certificate-section__img_opened');
+
+    const certificate = document.querySelector('.certificate-section__certificate');
+    const certificateBtn = document.querySelector('.certificate-section__btn');
+
+    certificate.classList.toggle('certificate-section__certificate_opened');
+
+    if (certificate.classList.contains('certificate-section__certificate_opened')) {
+      certificateBtn.textContent = 'Закрыть окно просмотра';
+      document.body.style.overflow = 'hidden';
+    } else {
+      certificateBtn.textContent = 'Сертификат соответсвия';
+      document.body.style.overflow = 'auto';
+    }
   };
 
   return (
@@ -60,10 +71,12 @@ const CertificateSection = ({ classes }) => {
         />
       </div>
       <div className="certificate-section__equipment">
-        <h3 className="certificate-section__subtitle">Лучшее оборудование</h3>
-        <p className="certificate-section__text">
-          Работаем на самом высокотехнологичном оборудовании для изготовления пенопласта
-        </p>
+        <div className="certificate-section__equipment-wrapper">
+          <h3 className="certificate-section__subtitle">Лучшее оборудование</h3>
+          <p className="certificate-section__text">
+            Работаем на самом высокотехнологичном оборудовании для изготовления пенопласта
+          </p>
+        </div>
         <img
           className="certificate-section__img certificate-section__img_type_equipment"
           src={equipmentImg}
