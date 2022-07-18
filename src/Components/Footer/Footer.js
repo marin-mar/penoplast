@@ -1,15 +1,14 @@
 import React from 'react';
+import Logo from '../Logo/Logo';
 
 import './Footer.scss';
 
 const Footer = () => {
-	return (
+  return (
     <footer className="footer">
-      <h2>footer</h2>
+      <Logo classes='footer__logo' />
     </footer>
   );
 };
-
-
 
 export default Footer;

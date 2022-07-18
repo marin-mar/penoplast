@@ -1,1 +1,23 @@
 @import '../../assets/variables.scss';
+
+.footer {
+  color: $light;
+  background: $gradient-dark;
+
+  &__logo {
+    & .logo__text {
+      color: $light;
+    }
+
+    & .logo__wrapper {
+      width: auto;
+      height: auto;
+      background-color: inherit;
+    }
+
+		& .logo__img {
+			width: 100px;
+			height: 100px;
+		}
+  }
+}
