@@ -1,0 +1,37 @@
+@import '../../assets/variables.scss';
+
+.client-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    text-transform: none;
+    margin: 85px auto 45px;
+  }
+
+  &__list {
+    margin-bottom: 85px;
+  }
+
+  &__form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+
+    @media screen and (min-width: 1100px) {
+      order: 1;
+    }
+  }
+}

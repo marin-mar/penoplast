@@ -80,5 +80,32 @@
       width: 268px;
       min-height: 372px;
     }
+
+    &_client {
+      display: flex;
+      background: transparent;
+      width: min-content;
+      min-height: min-content;
+      height: auto;
+      padding: 0;
+      gap: 0;
+      box-sizing: border-box;
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      & .card__icon {
+        object-fit: contain;
+        object-position: center;
+        max-width: 220px;
+        height: auto;
+      }
+    }
   }
 }

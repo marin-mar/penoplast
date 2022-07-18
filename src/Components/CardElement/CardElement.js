@@ -20,6 +20,18 @@ const CardElement = ({ classes, card, cardType = 'card', onClickHandler }) => {
           />
         </div>
       );
+    case 'clients':
+      return (
+        <a
+          className={`${classes} card card_type_client`}
+          id={card.id}
+          href={card.link || '#'}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onClickHandler}>
+          <img className="card__icon" src={card.icon} alt={card.title} />
+        </a>
+      );
     case 'card':
     default:
       return (
